@@ -36,7 +36,7 @@ function page() {
         "Bonjour. Je m'appelle Ziya, et je poursuis mes études en B.Tech en informatique avec une spécialisation en ingénierie logicielle à SRMIST Kattankulathur.Dans ce cadre, j'ai analysé la ville d'Lyon en France.",
       name: "Ziya Khan",
       designation: "Ziya Khan",
-      src: "/ziya.jpeg",
+      src: "/ziya.jpg",
     },
   ];
   return (
