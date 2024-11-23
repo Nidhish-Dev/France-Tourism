@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --background: #ffffff;
@@ -15,7 +16,184 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  /* color: var(--foreground); */
+  /* background: var(--background); */
+  background-color: black;
   font-family: Arial, Helvetica, sans-serif;
+}
+.HeroContainer {
+  position: relative;
+  background-image: url('/homeBG.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.HeroContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.507);
+  z-index: 1;
+}
+
+.HeroContainer > .flex {
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.HeroContainer h2, .HeroContainer p, .explore h2, .explore p, .facts h2, .facts p {
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+
+.HeroContainer h2, .explore h2, .facts h2 {
+  animation-delay: 0.5s; /* Delay for heading */
+}
+
+.HeroContainer p, .explore p, .facts p {
+  animation-delay: 1s; /* Delay for paragraph */
+}
+.explore{
+  position: relative;
+  background-image: url('/explore.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.explore::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.507);
+  z-index: 1;
+}
+.explore > .flex {
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.facts{
+  position: relative;
+  background-image: url('/factsbg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.facts::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.507);
+  z-index: 1;
+}
+.facts > .flex {
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.Navbar{
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.placesContainer {
+  position: relative;
+  background-image: url('/placesbg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* height: 100vh; */
+}
+
+.placesContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.507);  /* Dark overlay */
+  z-index: 0; /* Ensure overlay is behind the content */
+}
+
+/* Ensure the content (Navbar and cards) are above the overlay */
+.fixed-content {
+  z-index: 1; /* Higher z-index than the overlay */
+}
+
+.mt-20 {
+  z-index: 1; /* Higher z-index for content inside the container */
+}
+/* Mobile Devices */
+@media (max-width: 480px) {
+  .HeroContainer {
+    background-position: center top;
+  }
+
+  .HeroContainer h2 {
+    font-size: 5xl; /* Smaller font size for smaller devices */
+    padding: 5px;
+  }
+
+  .HeroContainer p {
+    font-size: 0.875rem;
+    padding: 0 10px;
+  }
+
+  .HeroContainer p:last-child {
+    font-size: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .flex {
+    padding: 0 2rem;
+  }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .HeroContainer h2 {
+    font-size: 3xl;
+    padding: 10px;
+  }
+
+  .HeroContainer p {
+    font-size: 1rem;
+  }
+
+  .HeroContainer p:last-child {
+    font-size: 0.875rem;
+    margin-top: 2rem;
+  }
+
+  .flex {
+    padding: 0 4rem;
+  }
 }
