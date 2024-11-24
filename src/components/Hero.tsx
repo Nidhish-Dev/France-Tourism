@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
-
+import Clock from "./Clock"; // Import the Clock component
 
 function Hero() {
   return (
@@ -15,7 +15,10 @@ function Hero() {
         </div>
 
         {/* Parallax Section 1 */}
-        <div className="h-screen flex items-center justify-center w-full flex-col px-4 text-center pt-20 bg-fixed bg-cover bg-center" >
+        <div className="h-screen flex items-center justify-center w-full flex-col px-4 text-center pt-20 bg-fixed bg-cover bg-center relative" style={{ backgroundImage: "url('/your-background-image.jpg')" }}>
+        <div className="mt-">
+          <Clock /> {/* Include the Clock component here */}
+        </div>
           <h2 className="bg-clip-text text-transparent bg-gradient-to-b text-white text-4xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight">
             tourisme français
           </h2>
