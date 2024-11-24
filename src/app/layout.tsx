@@ -43,7 +43,7 @@ export default function RootLayout({
       <head>
         <link rel="preload" href="/fonts/GeistVF.woff" as="font" type="font/woff" />
         <link rel="preload" href="/fonts/GeistMonoVF.woff" as="font" type="font/woff" />
-        <title>Tourism</title>
+        <title>Tourisme Français</title>
       </head>
 
       <html lang="en">
