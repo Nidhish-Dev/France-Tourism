@@ -20,7 +20,7 @@ function Hero() {
           <Clock /> {/* Include the Clock component here */}
         </div>
           <h2 className="bg-clip-text text-transparent bg-gradient-to-b text-white text-4xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight">
-            tourisme français
+          Tourisme France
           </h2>
           <p className="max-w-xl mx-auto text-white text-sm md:text-lg">
             "Découvrez la beauté et l'élégance de la France, un voyage inoubliable au cœur de l'art, de l'histoire et de la gastronomie."
